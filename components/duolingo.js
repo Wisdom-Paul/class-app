@@ -1,6 +1,10 @@
 import { Text, Image, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+
 const Duolingo = ()=>{
-    return(
+  const Navigator = useNavigation()
+      return(
         <View
         style={{
           backgroundColor: "black",
@@ -16,11 +20,11 @@ const Duolingo = ()=>{
   
         <Text
           style={{
-            color: `white`,
-            fontSize: 40,
-            fontWeight: `bold`,
-            color: `#2BD800`,
-            marginTop: 20,
+            color:`white`,
+            fontSize:40,
+            fontWeight:`bold`,
+            color:`#2BD800`,
+            marginTop:20,
           }}
         >
           duolingo
@@ -55,6 +59,7 @@ const Duolingo = ()=>{
                 color: "#191920",
                 textAlign: "center",
               }}
+             onPress={() =>Navigator.navigate ("LoationPermit")} 
             >
               GET STARTED
             </Text>
@@ -71,6 +76,7 @@ const Duolingo = ()=>{
               backgroundColor: "#191920",
               marginTop: 20,
             }}
+            
           >
             <Text
               style={{

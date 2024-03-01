@@ -1,61 +1,77 @@
 import { Text, View, Image, Button, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const LoationPermit = () => {
+  const Navigator = useNavigation();
   return (
     <View
       Style={{
         backgroundColor: "white",
         alignItems: "center",
         justifyContent: "center",
-        height: "100%",
       }}
     >
       <Text
         style={{
           marginTop: 80,
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
+          alignSelf: "center",
+          fontWeight: "bold",
+          fontSize: 18,
         }}
       >
-        {" "}
-        Explore restuarant Nearby
+        Explore Restuarant Nearby
       </Text>
       <Image
-        source={require("../assets/logo.png")}
-        style={{ marginTop: 30, width: 90, height: 100, justifyContent: 'center',  }}
+        source={require("./../assets/oip.png")}
+        style={{ marginTop: 250, width: 100, height: 150, alignSelf: "center" }}
       />
       <Text
         style={{
-          color: "white",
+          color: "black",
           marginTop: "10%",
           textAlign: "center",
-          fontWeight: 700,
           alignSelf: "center",
+          fontSize: 14,
+          width: 350,
         }}
       >
-        By granting permision, you can search for restuarants near you and
-        receive more accurate delivery
+        By granting permision, you can search for restuarants 
       </Text>
+      <Text
+        style={{
+          color: "black",
+          marginTop: "4%",
+          textAlign: "center",
+          alignSelf: "center",
+          fontSize: 14,
+          width: 350,
+        }}
+      >
+       around you and receive more accurate delivery
+       </Text>
+
       <TouchableOpacity
         style={{
-          borderRadius: 14,
+          borderRadius: 15,
           padding: 14,
           backgroundColor: "red",
           width: 312,
-          marginTop: 15,
-        }} >
+          marginTop: 40,
+          fontWeight: "bold",
+          alignSelf: "center",
+        }}
+      >
         <Text
           style={{
             fontSize: 17,
             color: "white",
             textAlign: "center",
           }}
+          onPress={() => Navigator.navigate("DeliveryMan")}
         >
           Grant Permission
         </Text>
       </TouchableOpacity>
-      
     </View>
   );
 };
