@@ -74,39 +74,31 @@ const Start = () => {
         </View>
         {toggle == "Email" ? <Email /> : <Nomba />}
 
-        <View
-          style={{
-            flexDirection: "row",
-            // alignItems: "center",
-            gap: 4,
-            // width: "90%",
-          }}
-        >
+        <View style={{ marginVertical: 7, gap: 4, flexDirection: "row" }}>
           <Checkbox
             style={{ borderColor: "red" }}
             value={isChecked}
             onValueChange={setIsChecked}
-            color={isChecked ? "red" : "black"}
+            color={isChecked ? "red" : "red"}
           />
-          <View style={{}}>
-            <Text style={{ fontSize: 16 }}>
-              If you are creating a new account, {""}
-              <Text
-                style={{ color: "red" }}
-                onPress={() => Alert.alert("No refund after placing an order")}
-              >
-                Terms & Conditions {""}
-              </Text>
-              and {""}
-              <Text
-                style={{ color: "red" }}
-                onPress={() => Alert.alert("Coming soon")}
-              >
-                Privacy Policy {""}
-              </Text>
-              will apply.
+
+          <Text style={{ fontSize: 16 }}>
+            If you are creating a new account, {""}
+            <Text
+              style={{ color: "red" }}
+              onPress={() => Alert.alert("No refund after placing an order")}
+            >
+              Terms & Conditions {""}
             </Text>
-          </View>
+            and {""}
+            <Text
+              style={{ color: "red" }}
+              onPress={() => Alert.alert("Coming soon")}
+            >
+              Privacy Policy {""}
+            </Text>
+            will apply.
+          </Text>
         </View>
 
         <View style={{ alignItems: "center" }}>
